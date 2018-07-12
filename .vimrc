@@ -9,6 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 "vundle managed packages
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'w0rp/ale'
+call plug#end()
 
 "set the tab stop defaults
 "set tabstop=4
