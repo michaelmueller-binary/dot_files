@@ -10,6 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 
 "set the tab stop defaults
