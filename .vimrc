@@ -33,7 +33,7 @@ let g:netrw_banner = 0
     set statusline+=%*
     set laststatus=2
     syn on
-    :set mouse=a
+    ":set mouse=a
     "stop vim jumping back a character when hitting escape.
     "inoremap <silent> <Esc> <Esc>`^
     colorscheme desert
