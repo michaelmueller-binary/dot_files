@@ -13,6 +13,9 @@ Plugin 'w0rp/ale'
 Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 
+"CtrlP wont change working dir easier for finding files across all projects. 
+let g:ctrlp_working_path_mode = 0
+
 "set the tab stop defaults
 "set tabstop=4
 set shiftwidth=4
@@ -59,5 +62,10 @@ let g:netrw_banner = 0
     set undofile
     let mapleader = ","
     nnoremap <leader>a :Ack
+    
+    "ale perl checking
+    let g:ale_perl_perlcritic_profile = "/home/git/regentmarkets/cpan/rc/.perlcriticrc"
+    let g:ale_perl_perltidy_profile = "/home/git/regentmarkets/cpan/rc/.perltidyrc"
+    let g:ale_linters = { 'perl': ['perl','perlcritic','perltidy'] }
+    let g:ale_fixers = { 'perl':['perltidy'] }
 
-    let g:ale_linters = { 'perl': ['perl','perlcritic'] }
