@@ -62,7 +62,7 @@ let g:netrw_banner = 0
     set undofile
     let mapleader = ","
     nnoremap <leader>a :Ack
-    nnorempa <leader>p :!perldoc % <ENTER>
+    nnoremap <leader>p :!perldoc % <ENTER>
     set tag=/home/git
     "ale perl checking
     let g:ale_perl_perlcritic_profile = "/home/git/regentmarkets/cpan/rc/.perlcriticrc"
