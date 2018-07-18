@@ -62,10 +62,14 @@ let g:netrw_banner = 0
     set undofile
     let mapleader = ","
     nnoremap <leader>a :Ack
-    
+    nnorempa <leader>p :!perldoc % <ENTER>
+    set tag=/home/git
     "ale perl checking
     let g:ale_perl_perlcritic_profile = "/home/git/regentmarkets/cpan/rc/.perlcriticrc"
     let g:ale_perl_perltidy_profile = "/home/git/regentmarkets/cpan/rc/.perltidyrc"
     let g:ale_linters = { 'perl': ['perl','perlcritic','perltidy'] }
     let g:ale_fixers = { 'perl':['perltidy'] }
-
+    
+    "status line
+    set laststatus=2
+    set statusline=%f%=%{FugitiveStatusline()}
