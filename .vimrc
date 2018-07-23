@@ -32,10 +32,11 @@ let g:netrw_banner = 0
     set statusline+=%#warningmsg#
     set statusline+=%*
     set laststatus=2
+    set nu
     syn on
     ":set mouse=a
     "stop vim jumping back a character when hitting escape.
-    "inoremap <silent> <Esc> <Esc>`^
+    inoremap <silent> <Esc> <Esc>`^
     colorscheme desert
     "sn v mode ident code
     vmap <tab> >gv
@@ -63,7 +64,9 @@ let g:netrw_banner = 0
     let mapleader = ","
     nnoremap <leader>a :Ack
     nnoremap <leader>p :!perldoc % <ENTER>
-    set tag=/home/git
+
+    set tag=/home/git/tags
+
     "ale perl checking
     let g:ale_perl_perlcritic_profile = "/home/git/regentmarkets/cpan/rc/.perlcriticrc"
     let g:ale_perl_perltidy_profile = "/home/git/regentmarkets/cpan/rc/.perltidyrc"
