@@ -12,7 +12,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
-
+"fixes issues with TMUX and vim arrow keys. 
+inoremap <silent> <C-[>OC <RIGHT>
 "CtrlP wont change working dir easier for finding files across all projects. 
 let g:ctrlp_working_path_mode = 0
 
