@@ -77,3 +77,5 @@ let g:netrw_banner = 0
     "status line
     set laststatus=2
     set statusline=%f%=%{FugitiveStatusline()}
+    "kill buffers with out closing windows
+    command Bd bp\|bd \#
