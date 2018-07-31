@@ -35,9 +35,9 @@ let g:netrw_banner = 0
     set laststatus=2
     set nu
     syn on
-    ":set mouse=a
+    :set mouse=a
     "stop vim jumping back a character when hitting escape.
-    inoremap <silent> <Esc> <Esc>`^
+    "inoremap <silent> <Esc> <Esc>`^
     colorscheme desert
     "sn v mode ident code
     vmap <tab> >gv
@@ -56,7 +56,6 @@ let g:netrw_banner = 0
     vnoremap / /\v
     "show matches incremently
     set incsearch
-    autocmd FileType netrw nnoremap ? :help netrw-quickmap<CR>
     "remap esc to jj
     inoremap jj <ESC>
     "persisnent undo files
@@ -79,3 +78,5 @@ let g:netrw_banner = 0
     set statusline=%f%=%{FugitiveStatusline()}
     "kill buffers with out closing windows
     command Bd bp\|bd \#
+
+    hi Terminal ctermbg=232 guibg=#0f0f0f ctermfg=248 guifg=#a8a8a8
