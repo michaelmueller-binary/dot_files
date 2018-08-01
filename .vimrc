@@ -23,7 +23,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-setlocal spell spelllang=en_us
+set spell spelllang=en_us
 
 " NetRW remove Banner
 let g:netrw_banner = 0
