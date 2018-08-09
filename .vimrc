@@ -80,3 +80,4 @@ let g:netrw_banner = 0
     command Bd bp\|bd \#
 
     hi Terminal ctermbg=232 guibg=#0f0f0f ctermfg=248 guifg=#a8a8a8
+    tnoremap <F2> <C-W>N
