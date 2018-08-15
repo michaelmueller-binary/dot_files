@@ -11,6 +11,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ap/vim-buftabline'
 call vundle#end()
 "fixes issues with TMUX and vim arrow keys. 
 inoremap <silent> <C-[>OC <RIGHT>
@@ -81,3 +82,13 @@ let g:netrw_banner = 0
 
     hi Terminal ctermbg=232 guibg=#0f0f0f ctermfg=248 guifg=#a8a8a8
     tnoremap <F2> <C-W>N
+    
+    nnoremap <F3> :bnext<CR>
+    tnoremap <F3> <C-W>:bnext<CR>
+    nnoremap <F4> :bprev<CR>
+    tnoremap <F4> <C-W>:bprev<CR>
+    nnoremap <C-l> <C-W>l
+    tnoremap <C-l> <C-W>l
+    nnoremap <C-k> <C-W>k
+    nnoremap <C-h> <C-W>h
+    nnoremap <C-j> <C-W>j
