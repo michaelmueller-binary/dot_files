@@ -92,3 +92,15 @@ let g:netrw_banner = 0
     nnoremap <C-k> <C-W>k
     nnoremap <C-h> <C-W>h
     nnoremap <C-j> <C-W>j
+    
+    nnoremap <F5> :checktime<CR>
+
+" change local dir to the repos dir
+"
+function! ChangeBaseDir()
+    cd /home/git/regentmarkets
+    let dirarray = split(expand('%:.'),'/')
+    let dir = dirarray[0]
+    exec "lcd ". dir
+endfunction
+
