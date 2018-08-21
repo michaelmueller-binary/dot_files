@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 "vundle managed packages
-Plugin 'mileszs/ack.vim'
+Plugin 'code4pay/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -63,7 +63,7 @@ let g:netrw_banner = 0
     set undodir=~/vimundo
     set undofile
     let mapleader = ","
-    nnoremap <leader>a :Ack
+    nnoremap <leader>a :Ack! <SPACE>
     nnoremap <leader>p :!perldoc % <ENTER>
 
     set tag=/home/git/tags
