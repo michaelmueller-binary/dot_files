@@ -84,13 +84,13 @@ let g:netrw_banner = 0
     "kill buffers with out closing windows
      command Bd bp\|bd \#
 
-    #buffer movment (used with Autohotkey and buftabs)
+    "buffer movment (used with Autohotkey and buftabs)
     nnoremap <F3> :bnext<CR>
     tnoremap <F3> <C-W>:bnext<CR>
     nnoremap <F4> :bprev<CR>
     tnoremap <F4> <C-W>:bprev<CR>
    
-   #easier window movement
+    "easier window movement
     nnoremap <C-l> <C-W>l
     tnoremap <C-l> <C-W>l
     nnoremap <C-k> <C-W>k
