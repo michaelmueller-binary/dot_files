@@ -12,9 +12,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ap/vim-buftabline'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 call vundle#end()
-"fixes issues with TMUX and vim arrow keys. 
-inoremap <silent> <C-[>OC <RIGHT>
+
 "CtrlP wont change working dir easier for finding files across all projects. 
 let g:ctrlp_working_path_mode = 0
 
@@ -31,15 +34,13 @@ let g:netrw_banner = 0
 
 "allow you to move buffers with out having to save them each time.
  set hidden
-    set statusline+=%#warningmsg#
-    set statusline+=%*
-    set laststatus=2
+
     set nu
     syn on
     :set mouse=a
     "stop vim jumping back a character when hitting escape.
     "inoremap <silent> <Esc> <Esc>`^
-    colorscheme desert
+    colorscheme code4pay
     "sn v mode ident code
     vmap <tab> >gv
     vmap <s-tab> <gv
@@ -76,17 +77,20 @@ let g:netrw_banner = 0
     
     "status line
     set laststatus=2
-    set statusline=%f%=%{FugitiveStatusline()}
-    "kill buffers with out closing windows
-    command Bd bp\|bd \#
-
-    hi Terminal ctermbg=232 guibg=#0f0f0f ctermfg=248 guifg=#a8a8a8
-    tnoremap <F2> <C-W>N
+    set statusline+=%#warningmsg#
+    set statusline+=%#LineNr#
+    set statusline+=%f%=%{FugitiveStatusline()}   
     
+    "kill buffers with out closing windows
+     command Bd bp\|bd \#
+
+    #buffer movment (used with Autohotkey and buftabs)
     nnoremap <F3> :bnext<CR>
     tnoremap <F3> <C-W>:bnext<CR>
     nnoremap <F4> :bprev<CR>
     tnoremap <F4> <C-W>:bprev<CR>
+   
+   #easier window movement
     nnoremap <C-l> <C-W>l
     tnoremap <C-l> <C-W>l
     nnoremap <C-k> <C-W>k
