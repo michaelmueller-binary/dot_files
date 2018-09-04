@@ -1,0 +1,8 @@
+snippet sql
+        $result =$dbic->run (
+                fixup=> sub {
+                        $_->selectrow_hashref("${1}",
+                              undef,
+                              ${2},
+                              ${0},
+                )};
