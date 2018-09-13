@@ -60,6 +60,7 @@ let g:netrw_banner = 0
     set incsearch
     "remap esc to jj
     inoremap jj <ESC>
+    set backupdir=~/vimundo
     "persisnent undo files
     set undodir=~/vimundo
     set undofile
