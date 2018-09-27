@@ -1,38 +1,38 @@
 snippet sql
-        $result =$dbic->run (
-                fixup=> sub {
-                        $_->selectrow_hashref("${1}",
-                                undef,
-                                ${2},
-                                ${0},
-                )};
-                );
+	$result =$dbic->run (
+		fixup=> sub {
+			$_->selectrow_hashref("${1}",
+				undef,
+				${2},
+				${0},
+		)};
+		);
 snippet dd
-        use Data::Dumper;
-        warn Dumper(${0});
+	use Data::Dumper;
+	warn Dumper(${0});
 
 snippet cw
-        local $SIG{__WARN__} = sub {
-           use Devel::StackTrace;
-           my $trace = Devel::StackTrace->new;
-           print $trace->as_string
-        };
+	local $SIG{__WARN__} = sub {
+	   use Devel::StackTrace;
+	   my $trace = Devel::StackTrace->new;
+	   print $trace->as_string
+	};
 
 snippet msub
-        =head2 ${1:Sub_name}
+	=head2 ${1:Sub_name}
 
-        ${2:Description}
-        Takes the following arguments as named parameters
+	${2:Description}
+	Takes the following arguments as named parameters
 
-        =over 4
+	=over 4
 
-        =item $3
+	=item $3
 
-        =back
+	=back
 
-        Returns a
+	Returns a
 
-        =cut
+	=cut
 
-        sub $1 {
+	sub $1 {
 
