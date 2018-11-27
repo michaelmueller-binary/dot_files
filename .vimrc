@@ -83,11 +83,11 @@ let g:netrw_banner = 0
     set statusline+=%f%=%{FugitiveStatusline()}   
     
     "kill buffers with out closing windows
-     command Bd bp\|bd \#
+     command Bd b#|bd#
      
     "word completion
     inoremap <LEADER>c <C-x><C-p>
-    
+    nnoremap <F2> :Ex<CR> 
     "buffer movment (used with Autohotkey and buftabs)
     nnoremap <F3> :bnext<CR>
     tnoremap <F3> <C-W>:bnext<CR>
