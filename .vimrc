@@ -87,12 +87,10 @@ let g:netrw_banner = 0
      
     "word completion
     inoremap <LEADER>c <C-x><C-p>
+    "open file browser at different locations
     nnoremap <F2> :Ex<CR> 
     "buffer movment (used with Autohotkey and buftabs)
     nnoremap <F3> :Ex /home/git/regentmarkets<CR>
-    tnoremap <F3> <C-W>:bnext<CR>
-    nnoremap <F4> :bprev<CR>
-    tnoremap <F4> <C-W>:bprev<CR>
    
     "easier window movement
     nnoremap <C-l> <C-W>l
