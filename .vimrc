@@ -81,6 +81,7 @@ let g:netrw_banner = 0
     "set statusline+=%#warningmsg#
     "set statusline+=%#LineNr#
     set statusline=%f%=%{FugitiveStatusline()}   
+    set fillchars+=vert:│
     
     "kill buffers with out closing windows
      command Bd b#|bd#
