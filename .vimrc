@@ -89,9 +89,13 @@ let g:netrw_banner = 0
     inoremap <LEADER>c <C-x><C-p>
     "open file browser at different locations
     nnoremap <F2> :Ex<CR> 
-    "buffer movment (used with Autohotkey and buftabs)
     nnoremap <F3> :Ex /home/git/regentmarkets<CR>
-   
+    "buffer movment (used with Autohotkey and buftabs)
+    nnoremap <F7> :bp<CR> 
+    nnoremap <F8> :bn<CR>  
+    tnoremap <F7> <C-W>:bp<CR>
+    tnoremap <F8> <C-W>:bn<CR>
+     
     "easier window movement
     nnoremap <C-l> <C-W>l
     tnoremap <C-l> <C-W>l
