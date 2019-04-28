@@ -105,6 +105,10 @@ let g:netrw_banner = 0
     nnoremap <C-j> <C-W>j
     
     nnoremap <F5> :checktime<CR>
+    
+    "Remote Copy 
+    nnoremap "+y :w  !nc -q0 127.0.0.1 3333<CR><CR>
+    vnoremap "+y :w  !nc -q0 127.0.0.1 3333<CR><CR>
 
 " change local dir to the repos dir
 "
