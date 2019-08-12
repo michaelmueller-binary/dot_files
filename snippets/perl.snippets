@@ -17,18 +17,17 @@ snippet cw
 	   my $trace = Devel::StackTrace->new;
 	   print $trace->as_string
 	};
-
 snippet msub
 	=head2 ${1:Sub_name}
 
-	${2:Description}
+	Description: ${2:Description}
 	Takes the following arguments as named parameters
 
 	=over 4
 
-	=item $3
+	=item - ${3:attr 1}
 	
-	=item $4
+	=item - ${4:attr 2}
 
 	=back
 
@@ -37,8 +36,8 @@ snippet msub
 	=cut
 
 	sub $1 {
-           my($self, %attrs) = @_;
-	   for (qw ( $3 $4  )){ die " argument  $_  is required if !defined($attrs{$_}) } ;
+		my($self, %attrs) = @_;
+		for (qw ( $3 $4  )){ die " argument  $_  is required if !defined($attrs{$_}) } ;
 	
 	}
-	   
+   
