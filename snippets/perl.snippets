@@ -27,6 +27,8 @@ snippet msub
 	=over 4
 
 	=item $3
+	
+	=item $4
 
 	=back
 
@@ -35,4 +37,8 @@ snippet msub
 	=cut
 
 	sub $1 {
-
+           my($self, %attrs) = @_;
+	   for (qw ( $3 $4  )){ die " argument  $_  is required if !defined($attrs{$_}) } ;
+	
+	}
+	   
