@@ -103,7 +103,7 @@ let g:netrw_banner = 0
     nnoremap <C-k> <C-W>k
     nnoremap <C-h> <C-W>h
     nnoremap <C-j> <C-W>j
-    
+    nnoremap <LEADER>b <C-W>j <C-W>j <C-W>h <C-W>h   
     nnoremap <F5> :checktime<CR>
     
     "Remote Copy 
