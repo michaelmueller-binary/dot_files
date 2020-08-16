@@ -40,4 +40,26 @@ snippet msub
 		for (qw ( $3 $4  )){ die " argument  $_  is required if !defined($attrs{$_}) } ;
 	
 	}
+	
+snippet mpack
+	package ${1:Package_Name}
+	use strict; 
+	use warnings;
+	no indirect; 
+	
+	=head1 NAME
+     
+	C<$1> - does something
+
+	=head1 SYNOPSIS
+
+		Initialisation code 
+
+	=head1 Description
+
+
+	=cut
+
+	=head1 Methods;
    
+
