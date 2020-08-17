@@ -10,7 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'code4pay/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf'
 Plugin 'ap/vim-buftabline'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -34,7 +34,7 @@ let g:netrw_banner = 0
 
 "allow you to move buffers with out having to save them each time.
  set hidden
-
+nnoremap ? :Ag <c-r><c-w><cr>
     set nu
     syn on
     :set mouse=a
@@ -67,7 +67,7 @@ let g:netrw_banner = 0
     let mapleader = ","
     nnoremap <leader>a :Ack! <SPACE>
     nnoremap <leader>p :!perldoc % <ENTER>
-
+autocmd BufNewFile,BufRead *.meals set syntax=json
     set tag=/home/git/tags
 
     "ale perl checking
