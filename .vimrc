@@ -28,12 +28,13 @@ set softtabstop=4
 set expandtab
 
 set spell spelllang=en_us
-
+autocmd BufNewFile,BufRead *.t set syntax=perl
 " NetRW remove Banner
 let g:netrw_banner = 0
 
 "allow you to move buffers with out having to save them each time.
  set hidden
+"fzf
 nnoremap ? :Ag <c-r><c-w><cr>
     set nu
     syn on
