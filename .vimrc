@@ -17,6 +17,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 
 "CtrlP wont change working dir easier for finding files across all projects. 
@@ -71,9 +72,10 @@ nnoremap <C-t> :g/^method\s\<BAR>^sub\s/# <ENTER>
     let mapleader = ","
     nnoremap <leader>a :Ack! <SPACE>
     nnoremap <leader>p :!perldoc % <ENTER>
-autocmd BufNewFile,BufRead *.meals set syntax=json
+    autocmd BufNewFile,BufRead *.meals set syntax=json
     set tag=/home/git/tags
-
+    nnoremap <F7> :TagbarToggle<CR>
+    nnoremap <leader>f :Files<CR>
     "ale perl checking
     let g:ale_perl_perlcritic_profile = "/home/git/regentmarkets/cpan/rc/.perlcriticrc"
     let g:ale_perl_perltidy_profile = "/home/git/regentmarkets/cpan/rc/.perltidyrc"
@@ -96,11 +98,11 @@ autocmd BufNewFile,BufRead *.meals set syntax=json
     nnoremap <F2> :Ex<CR> 
     nnoremap <F3> :Ex /home/git/regentmarkets<CR>
     "buffer movment (used with Autohotkey and buftabs)
-    nnoremap <F7> :bp<CR> 
-    nnoremap <F8> :bn<CR>  
-    tnoremap <F7> <C-W>:bp<CR>
-    tnoremap <F8> <C-W>:bn<CR>
-     
+    nnoremap <Esc>[1;3D :bp<CR>
+    nnoremap <Esc>[1;3C :bn<CR>
+    tnoremap <Esc>[1;3D <C-W>:bp<CR>
+    tnoremap <Esc>[1;3C <C-W>:bn<CR>
+    
     "easier window movement
     nnoremap <C-l> <C-W>l
     tnoremap <C-l> <C-W>l
