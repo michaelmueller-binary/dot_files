@@ -38,7 +38,7 @@ let g:netrw_banner = 0
  set hidden
 "fzf
 nnoremap ? :Ag <c-r><c-w><cr>
-nnoremap <C-t> :g/^method\s\<BAR>^sub\s/# <ENTER>
+
 
     set nu
     syn on
