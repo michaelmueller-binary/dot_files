@@ -113,8 +113,14 @@ nnoremap ? :Ag <c-r><c-w><cr>
     nnoremap <F5> :checktime<CR>
     
     "Remote Copy 
-    nnoremap "+y :w  !nc -q0 127.0.0.1 3333<CR><CR>
-    vnoremap "+y :w  !nc -q0 127.0.0.1 3333<CR><CR>
+    nnoremap "+y :w  !nc -q0 127.0.0.1 3333<CR>
+    vnoremap "+y :w  !nc -q0 127.0.0.1 3333<CR>
+
+    " Extract Sub                                
+    vnoremap <LEADER>x !refactor.pl "`cat` "     
+                                                 
+
+
 
 " change local dir to the repos dir
 "
