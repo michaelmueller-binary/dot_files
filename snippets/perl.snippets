@@ -37,7 +37,7 @@ snippet msub
 
 	sub $1 {
 		my($self, %attrs) = @_;
-		for (qw ( $3 $4  )){ die " argument  $_  is required if !defined($attrs{$_}) } ;
+		for (qw ( $3 $4  )){ die " argument  $_  is required" if !defined($attrs{$_}) } ;
 	
 	}
 	
