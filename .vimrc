@@ -15,7 +15,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'ap/vim-buftabline'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'majutsushi/tagbar'
 call vundle#end()
@@ -38,7 +38,7 @@ let g:netrw_banner = 0
  set hidden
 "fzf
 nnoremap ? :Ag <c-r><c-w><cr>
-
+let g:UltiSnipsEditSplit="vertical"
 
     set nu
     syn on
